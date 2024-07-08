@@ -1,4 +1,8 @@
-﻿namespace productoApp
+﻿using System;
+using Microsoft.Maui.Controls;
+using productoApp.Layouts;
+
+namespace productoApp
 {
     public partial class MainPage : ContentPage
     {
@@ -9,16 +13,14 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void OnInicioClicked(object sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            Navigation.PushAsync(new Layouts.Inicio());
         }
+        private void OnRegistroClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Layouts.Registro());
+        }
+
     }
 }

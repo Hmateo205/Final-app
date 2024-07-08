@@ -17,14 +17,7 @@ namespace productoApp.Services
         HttpClient httpClient=new HttpClient();
         public APIService()
         {
-            /*var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-            _baseUrl = builder.GetSection("ApiSettings:BaseUrl").Value;
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri(_baseUrl);*/
-            _baseUrl = "http://localhost:5000";
+            _baseUrl = "http://localhost:5259/swagger/v1/swagger.json";
             httpClient.BaseAddress= new Uri(_baseUrl);
         }
         public async Task<bool> DeleteProducto(int ProductoId)

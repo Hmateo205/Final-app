@@ -4,38 +4,48 @@
              x:Class="productoApp.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <!-- Texto de bienvenida -->
+            <Label Text="¡Bienvenido a mi proyecto final"
+               FontSize="24"
+               HorizontalOptions="Center" />
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <!-- Texto adicional -->
+            <Label Text="Gestor de inventario"
+               FontSize="20"
+               HorizontalOptions="Center" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
+            <!-- Botón Iniciar Sesion -->
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            x:Name="Inicio"
+            Text="Iniciar Sesion" 
+            SemanticProperties.Hint="Counts the number of times you click"
+            Clicked="OnInicioClicked"
+            HorizontalOptions="Fill" 
+            TextColor="Black"
+            BackgroundColor="Beige"/>
 
-        </VerticalStackLayout>
+            <!-- Botón Crear Sesion -->
+            <Button
+            x:Name="Registro"
+            Text="Crear Sesion" 
+            SemanticProperties.Hint="Counts the number of times you click"
+            Clicked="OnRegistroClicked"
+            HorizontalOptions="Fill" 
+            TextColor="Black"
+            BackgroundColor="Beige"/>
+
+
+            <!-- Imagen -->
+            <Image
+            Source="dotnet_bot.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="dot net bot in a race car number eight" />
+
+
+        </StackLayout>
+
     </ScrollView>
 
 </ContentPage>
