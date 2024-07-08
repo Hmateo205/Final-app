@@ -24,7 +24,7 @@ namespace productoApp.Services
             _baseUrl = builder.GetSection("ApiSettings:BaseUrl").Value;
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri(_baseUrl);*/
-            _baseUrl = "https://apibodega20231205124415.azurewebsites.net";
+            _baseUrl = "http://localhost:5000";
             httpClient.BaseAddress= new Uri(_baseUrl);
         }
         public async Task<bool> DeleteProducto(int ProductoId)
